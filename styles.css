@@ -6,7 +6,7 @@ html, body {
 
 #container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -72,6 +72,18 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 768px) {
+  .btn-3d,
+  #acerca,
+  #proyectos,
+  #habilidades,
+  #contacto {
+    position: static;
+    transform: none;
+    margin: 15px auto;
+    display: block;
+  }
+}
 
 /* Fondo oscuro */
 .modal {
@@ -90,7 +102,7 @@ html, body {
 
 /* Caja del modal */
 .modal-contenido {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 1);
   color: bisque;
   padding: 30px;
   border-radius: 12px;
@@ -99,7 +111,6 @@ html, body {
   animation: aparecer 0.5s ease-in-out;
   top: 0px;
   left: 19%;
-
 }
 
 
@@ -145,6 +156,12 @@ html, body {
 #imgModalImp{
   width: 200px;
   height: 150px;
+}
+
+#imgModal,
+#imgModalImp {
+  max-width: 100%;
+  height: auto;
 }
 
 .col-texto {
@@ -209,3 +226,8 @@ h2{
   background: none!important;
 
 }
+
+@media (max-width: 768px) {
+  .columnas-3 {
+    grid-template-columns: 1fr;
+  }
