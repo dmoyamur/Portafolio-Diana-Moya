@@ -90,7 +90,7 @@ html, body {
 
 /* Caja del modal */
 .modal-contenido {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   color: bisque;
   padding: 30px;
   border-radius: 12px;
@@ -101,6 +101,7 @@ html, body {
   left: 19%;
 
 }
+
 
 /* Botón cerrar */
 .cerrarModal {
@@ -191,14 +192,12 @@ h2{
 
 .btn-enviar {
   padding: 10px 20px;
-  font-size: 10px;
+  font-size: 18px;
   border: none;
   border-radius: 12px;
   background: rgb(36, 76, 86);
   color: bisque;
   cursor: pointer;
-
-
   box-shadow: 0 8px 0 rgb(49,68,72);
 }
 
