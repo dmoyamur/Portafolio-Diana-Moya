@@ -55,28 +55,42 @@ btnAnterior.addEventListener("click", () => {
 });
 
 const formulario = document.getElementById("formEnvioInfo");
-formulario.addEventListener('submit',function(e){
-e.preventDefault();
-Swal.fire({
-  title: "¡Gracias por tu mensaje!",
-  text: "Me pondré en contacto muy pronto",
-  icon: "success",
-  
-  // Cambiar colores de fondo y texto
-  background: "#8ba3bdff", // color de fondo del popup
-  color: "bisque",      // color del texto
-  iconColor: "rgb(36, 76, 86)",  // color del icono
-  
-  // Personalizar botón
-  confirmButtonText: "Aceptar",
-  confirmButtonColor: "rgb(36, 76, 86)", // color de fondo del botón
 
-    customClass: {
-    title: 'sin-fondo-title'},
-  
-  // Opcional: draggable
-  draggable: true
-});
+formulario.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(formulario);
+
+  fetch(formulario.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+  .then(response => {
+    if (response.ok) {
+      Swal.fire({
+        title: "¡Gracias por tu mensaje!",
+        text: "Me pondré en contacto muy pronto",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "rgb(36, 76, 86)",
+        customClass: {
+          popup: 'mi-popup',
+          title: 'mi-title',
+          htmlContainer: 'mi-texto'
+        }
+      });
+
+      formulario.reset();
+    } else {
+      Swal.fire("Error", "Hubo un problema al enviar.", "error");
+    }
+  })
+  .catch(() => {
+    Swal.fire("Error", "No se pudo enviar el formulario.", "error");
+  });
 });
 
 
