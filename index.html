@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="container">
-  <img src="./IMG/fondo.png" class="fondo" alt="fondo">
+
   <button class="btn-3d " id="acerca" data-modal="modalAcerca">     Acerca de mí  </button>
   <!-- Modal Acerca-->
     <div id="modalAcerca" class="modal">
@@ -29,31 +29,32 @@
     <div class="modal-contenido">
         <div class="primera pagina activo">
           <h2>BASES DE DATOS</h2></br>
-          <div class="fila">
-            <div class="col-img">
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-md-4">
               <h6>Diseño y desarrollo de una base de datos para puntos de venta, con manejo de clientes, proveedores, control de inventario y reportes de ventas y rentabilidad.</h5>
             </div>
-            <div class="col-img">
+            <div class="col-12 col-md-4">
               <img id="imgModal" src="./IMG/Bases de datos.png" alt="Bases de Datos" style="display: block, margin: 0 auto">
             </div>
-            <div class="col-img">
+            <div class="col-12 col-md-4">
               <h3>Logros obtenidos:</h3>
               <h6>✔️Centralización de la información</h5>
               <h6>✔️Manejo de información de compras y ventas en tiempo real que impactan directamete al inventario y rentabilidad</h6>
               <h6>✔️Informes de utilidades al final del movimiento.</h6>
+              <h6>✔️Despliegue del back en Azure usando base de datos relacional SQL.</h6>
             </div>
           </div>
       </div>
         <div class="siguiente pagina">
-          <h2>IMPLEMENTACIÓN DE SOFTWARE</h2>
-          <div class="fila">
-            <div class="col-img">
+          <h2>IMPLEMENTACIÓN DE SOFTWARE CONTABLE</h2>
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-md-4">
               <h6>Líder en implementación de software contable SAP Bussiness One, desde la fase de requerimientos, pasando por migración, personalización de layouts, vistas, optimización de procesos hasta la fase de mantenimiento y soporte.</h6>
             </div>
-            <div class="col-img">
+            <div class="col-12 col-md-4">
               <img id="imgModalImp" src="./IMG/SAP.jpg" alt="SAP">
             </div>
-            <div class="col-img">
+            <div class="col-12 col-md-4">
               <h3>Logros obtenidos:</h3>
               <h6>✔️Migración satisfactoria del 100% de la información.</h6>
               <h6>✔️Optimización de tiempos que impactaron en el flujo de efectivo por concepto de gastos de soporte</h6>
@@ -62,16 +63,27 @@
           </div>
         </div>
         <div class="siguiente pagina">
-          <h2>IMPLEMENTACIÓN DE SOFTWARE</h2>  
-          <div class="fila">
-            <div class="col-img">
-              <h6>Adicionalmente lideré la implementación del software de nómina Designer, el cual se integró a SAP Bussiness One, al igual que Produmex Scan, que también se sincroniza con el software contable y controla adecuadamente el flujo de inventarios.</h6>
+          <h2>IMPLEMENTACIÓN DE SOFTWARE NOMINA E INTEGRACIÓN CON SAP BO</h2>  
+          <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4">
+              <h6>Adicionalmente lideré la implementación del software de nómina Designer, el cual se integró a SAP Bussiness One.</h6>
               <img src="./IMG/Designer.png" alt="Designer" style="width: 200px; height: 100px;">
-              <img src="./IMG/produmex.png" alt="Produmex Scan" style="width: 200px; height: 100px;">
             </div>
-            <div class="col-img">
+            <div class="row align-items-center g-4">
               <h3>Logros obtenidos:</h3>
               <h6>✔️Conexión através de archivos planos desde SAP al software de nómina, garantizando los respectivos asientos contables con el mínimo de errores</h6>
+            </div>            
+          </div>      
+        </div>
+                <div class="siguiente pagina">
+          <h2>IMPLEMENTACIÓN DE CODIGOS DE BARRA E INTEGRACIÓN CON SAP BO</h2>  
+          <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4">
+              <h6>También se integra Produmex Scan, que también se sincroniza con el software contable y controla adecuadamente el flujo de inventarios.</h6>
+              <img src="./IMG/produmex.png" alt="Produmex Scan" style="width: 200px; height: 100px;">
+            </div>
+            <div class="row align-items-center g-4">
+              <h3>Logros obtenidos:</h3>
               <h6>✔️Control, orden y optimización de tiempos opertivos en el control general de inventarios</h6>
               <h6>✔️Implementación de área adicional para manejo de importaciones, lo que redujo la carga operativa en un 80%</h6>
             </div>            
@@ -92,13 +104,13 @@
     <div class="modal-contenido">
         <div class="habilidades">
           <h2>HABILIDADES TÉCNICAS</h2></br>
-          <div class="fila">
-            <div class="col-img">
+          <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4">
               <h6>✔️Bootstrap es un aliado para optimizar tiempos en la implementación de las diferentes secciones de una página.</h6>
               <h6>✔️JavaScript aporta funcionalidad eficaz através del uso de funciones que pueden usarse en cualquier momento</h6>
               <h6>✔️Frameworks como SweetAlert aportan elegancia en la interacción con el usuario </h6>
             </div>
-            <div class="col-img">
+            <div class="row align-items-center g-4">
               <canvas id="miGraficoBarras" width="400" height="200"></canvas>
             </div>
           </div>
@@ -136,13 +148,13 @@
           </div> </br>
         </form>
         <div class="datos">
-          <h5><i class="bi bi-envelope-check-fill"></i></ion-icon></i><strong>  Correo Electrónico:</strong></h4>
-          <h5 style="margin-left: 50px;">dianayeimymoya@gmail.com</h5>
-          <h5><i class="bi bi-telephone-fill"></i><strong>Celular:</strong></h5>
-          <h5 style="margin-left: 50px;">315 485 92 85</h5></br>
+          <label><i class="bi bi-envelope-check-fill"></i></ion-icon></i><strong>  Correo Electrónico:</strong></label>
+          <label style="margin-left: 50px;">dianayeimymoya@gmail.com</label>
+          <label><i class="bi bi-telephone-fill"></i><strong>Celular:</strong></label>
+          <label style="margin-left: 50px;">315 485 92 85</label></br>
           <div class="d-flex" style="gap:50px; justify-content: center;">
-            <h5><a href="https://github.com/dmoyamur" target="_blank" style="color: bisque; text-decoration: none;"><i class="bi bi-github"></i> GitHub</a></h5>
-            <h5><a href="https://www.linkedin.com/in/diana-yeimy-moya-murcia-desarrollador-fullstack/" target="_blank" style="color: bisque; text-decoration: none;"><i class="bi bi-linkedin"></i> LinkedIn</a></h5>
+            <label><a href="https://github.com/dmoyamur" target="_blank" style="color: bisque; text-decoration: none;"><i class="bi bi-github"></i> GitHub</a></label>
+            <label><a href="https://www.linkedin.com/in/diana-yeimy-moya-murcia-desarrollador-fullstack/" target="_blank" style="color: bisque; text-decoration: none;"><i class="bi bi-linkedin"></i> LinkedIn</a></label>
           </div>
         </div></br>
       </div>

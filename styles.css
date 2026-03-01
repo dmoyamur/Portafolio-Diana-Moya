@@ -11,12 +11,47 @@ html, body {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;   /* 👈 espacio entre columnas */
+    justify-items: center;
+    align-items: start;
+    height: auto;          /* 👈 clave */
+    min-height: auto;      /* 👈 por seguridad */
+    overflow: visible;     /* 👈 importante también */
+  }
+
+  .btn-3d {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0;
+    padding: 8px 12px;
+  }
+}
+
+body {
+  background: url("./IMG/fondo.png") center center / cover no-repeat;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: url("./IMG/fondo-mobile1.png") center center / cover no-repeat;
+    margin-top: 180px;
+  }
+}
+
 /* Imagen responsive */
 .fondo {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* CLAVE */
-  position: absolute;
+  min-height: 100vh;
+  overflow-x: hidden;
+  object-fit: cover; 
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -82,6 +117,9 @@ html, body {
     transform: none;
     margin: 15px auto;
     display: block;
+    
+    padding: 8px 18px;
+    font-size: 0.85rem;
   }
 }
 
@@ -102,7 +140,7 @@ html, body {
 
 /* Caja del modal */
 .modal-contenido {
-  background: rgba(0, 0, 0, 1);
+  background: rgb(36, 76, 86);
   color: bisque;
   padding: 30px;
   border-radius: 12px;
@@ -111,6 +149,40 @@ html, body {
   animation: aparecer 0.5s ease-in-out;
   top: 0px;
   left: 19%;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .modal-contenido {
+    left: 0;             /* 👈 quitamos desplazamiento */
+    position: static;    /* 👈 deja que flex lo centre */
+    width: 100%;
+    max-width: 95%;
+    max-height: 100dvh;
+    overflow-y: auto;
+    margin-top: 220px;
+    font-size: 0.9rem !important;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-contenido h5,
+  .modal-contenido h2{
+    font-size: 1.2rem;
+  }
+  .modal-contenido h6,
+  .modal-contenido h3,
+  .modal-contenido botton,
+  .modal-contenido label {
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -134,8 +206,8 @@ html, body {
 /* Animación */
 @keyframes aparecer {
   from {
-    transform: scale(2);
-    opacity: 0;
+    transform: scale(3);
+    opacity: 0.5;
   }
   to {
     transform: scale(1);
@@ -227,7 +299,8 @@ h2{
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .columnas-3 {
     grid-template-columns: 1fr;
-  }
+}
+}
