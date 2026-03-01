@@ -64,8 +64,9 @@ body {
   left: 45%;
   transform: translate(-50%, -50%);
 
+
   padding: 15px 40px;
-  font-size: 18px;
+  font-size: clamp(12px, 1.5vw, 18px);
   border: none;
   border-radius: 12px;
   background: rgb(36, 76, 86);
@@ -74,6 +75,18 @@ body {
 
   box-shadow: 0 8px 0 rgb(49,68,72);
 }
+@media (max-width: 1200px) {
+  .btn-3d {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 992px) {
+  .btn-3d {
+    transform: scale(0.8);
+  }
+}
+
 
 .btn-3d:active {
   transform: translate(-50%, -42%);
@@ -82,8 +95,8 @@ body {
 
 #acerca {
   position: absolute;
-  top: 20%;
-  left: 70%;
+  top: 30%;
+  left: 85%;
   transform: translate(-50%, -50%);
 }
 
@@ -96,14 +109,14 @@ body {
 
 #habilidades {
   position: absolute;
-  top: 60%;
-  left: 90%;
+  top: 50%;
+  left: 85%;
   transform: translate(-50%, -50%);
 }
 #contacto {
   position: absolute;
-  top: 80%;
-  left: 87%;
+  top: 60%;
+  left: 85%;
   transform: translate(-50%, -50%);
 }
 
